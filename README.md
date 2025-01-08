@@ -4,3 +4,5 @@ How to enable local env?
 3. Call `pip install <name>` to install a package
 4. Call `pip freeze > requirements.txt` for saving current requirements
 5. Call  `pip install -r requirements.txt` for installing packages from `requirements.txt`
+
+Run tests (pytest): `py -m pytest` 
