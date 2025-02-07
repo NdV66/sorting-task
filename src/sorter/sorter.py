@@ -18,7 +18,6 @@ def do_k_merge_sort(current_files):
             merged_chunk_prefix = str(uuid4()) + "_"
             current_files = setdiff1d(current_files, filenames_to_remove).tolist()
             current_files_len = len(current_files)
-            print("------ ------ ------ ------ ------" + "--> next files amount: " + str(current_files_len))
             continue
 
         source_filename_1 = current_files[i]
@@ -61,4 +60,4 @@ def do_sort(data_file_path, file_max_size):
     max_chunk_index = split_into_files(data_file_path, file_max_size, CHUNK_FILE_NAME)
     start_files = [CHUNK_FILE_NAME + str(i) + CHUNK_EXTENSION for i in range(0, max_chunk_index + 1)]
     result = do_k_merge_sort(start_files)
-    print("RESULT: " + result)
+    return result
